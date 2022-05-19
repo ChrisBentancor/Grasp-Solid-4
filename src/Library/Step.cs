@@ -1,4 +1,4 @@
-//-------------------------------------------------------------------------------
+ //-------------------------------------------------------------------------------
 // <copyright file="Step.cs" company="Universidad Católica del Uruguay">
 // Copyright (c) Programación II. Derechos reservados.
 // </copyright>
@@ -23,6 +23,7 @@ namespace Full_GRASP_And_SOLID
         public int Time { get; set; }
 
         public Equipment Equipment { get; set; }
+
 
         // Agregado por Expert
         public double GetStepCost()

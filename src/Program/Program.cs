@@ -22,8 +22,12 @@ namespace Full_GRASP_And_SOLID
 
             Recipe recipe = new Recipe();
             recipe.FinalProduct = GetProduct("Café con leche");
-            recipe.AddStep(new Step(GetProduct("Café"), 100, GetEquipment("Cafetera"), 120));
-            recipe.AddStep(new Step(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60));
+            recipe.AddStep(GetProduct("Café"), 100, GetEquipment("Cafetera"), 120);
+            recipe.AddStep(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60);
+        
+            // EL program creaba los step directamente pero no los usaba, por lo tanto tuvimos que crearlos
+            // en recipe, que si los usa para luego pasarlos a program, asi siguiendo el patron Creator.
+
 
             IPrinter printer;
             printer = new ConsolePrinter();
